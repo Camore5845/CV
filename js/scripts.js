@@ -31,4 +31,24 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
+    
 });
+
+window.addEventListener("load", animate);
+
+
+function animate() {
+    var animation = document.getElementById("d-block d-lg-none");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 350) {
+        clearInterval(id);
+      } else {
+        pos++;
+        animation.style.top = pos + "px";
+        animation.style.left = pos + "px";
+      }
+    }
+  }
